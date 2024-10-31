@@ -1,0 +1,91 @@
+﻿<Window x:Class="WindowsPlatform.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsPlatform"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF43444E">
+        <Button x:Name="btn_file" Content="File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnFileClick" FontSize="10" AutomationProperties.HelpText="Click to view files" Width="33">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="2"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_view" Content="View" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnFileClick" FontSize="10" AutomationProperties.HelpText="Click to" Width="33">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="1" Y="2"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_help" Content="Help" HorizontalAlignment="Left" Margin="86,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnViewClick" FontSize="10" AutomationProperties.HelpText="Click to view files" Width="33">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="2" X="3"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_tools" Content="Tools" HorizontalAlignment="Left" Margin="124,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnToolsClick" FontSize="10" AutomationProperties.HelpText="Click for options" Width="33">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="4" Y="2"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lbl_response" Content="" HorizontalAlignment="Left" Margin="317,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.684,4.451" Width="300" HorizontalContentAlignment="Center"/>
+        <Border BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="taskRunning_" Content="Loading..." Margin="208,79,254,111" FontWeight="Bold" Foreground="#FF121323" Width="332" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+    </Grid>
+</Window>
