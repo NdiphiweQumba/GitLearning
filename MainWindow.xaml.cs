@@ -24,7 +24,7 @@ namespace WindowsPlatform
 		private void OnViewClick(object s, RoutedEventArgs e)
 		{
 			//Clean Up
-			var repo = new Repository(@"C:\Users\Ndiph\Documents\Git\GAME DEVELOPMENT\Unity-Traffic-System");
+			var repo = new Repository(@"C:\Users\Ndiph\Documents\Git\WindowsPlatform\");
 			var branches = repo.Branches;
 			var bname = repo.Branches.FirstOrDefault(b => b.FriendlyName == "develop");
 			MessageBox.Show(bname.FriendlyName);
@@ -41,6 +41,16 @@ namespace WindowsPlatform
 
 		}
 		private void OnHelpClick(object s, RoutedEventArgs e)
+		{
+
+		}
+
+		private void OnClickViewFiles(object sender, RoutedEventArgs e)
+		{
+
+        }
+
+		private void OnStageClick(object sender, RoutedEventArgs e)
 		{
 
 		}
