@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WindowsPlatform"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FF43444E">
+    <Grid Background="#FF43444E" Margin="1,1,1,1">
         <Button x:Name="btn_file" Content="File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnFileClick" FontSize="10" AutomationProperties.HelpText="Click to view files" Width="33">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -84,8 +84,8 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbl_response" Content="" HorizontalAlignment="Left" Margin="317,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.684,4.451" Width="300" HorizontalContentAlignment="Center"/>
-        <Border BorderBrush="Black" BorderThickness="1"/>
-        <Label x:Name="taskRunning_" Content="Loading..." Margin="208,79,254,111" FontWeight="Bold" Foreground="#FF121323" Width="332" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="taskRunning_" Content="Loading..." Margin="254,100,257,100" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>

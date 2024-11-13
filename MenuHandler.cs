@@ -21,28 +21,28 @@ namespace WindowsPlatform.Menu
 			switch (name)
 			{
 				case "File":
-					MessageBox.Show($"{name} menu clicked");
+					OnButtonPress("File");
 					break;
 				case "View":
-					MessageBox.Show($"{name} menu clicked");
+					OnButtonPress("View");
 					break;
 				case "Help":
-					MessageBox.Show($"{name}  menu clicked");
+					OnButtonPress("Help");
 					break;
 				case "Tools":
-					MessageBox.Show($"{name}  menu clicked");
+					OnButtonPress("Tools");
 					break;
 				default:
-					MessageBox.Show($"Not Defined menu item clicked");
+					OnButtonPress("Not implemented button");
 					break;
 			}
 		}
 		public void InitializeMenuButtons(Button btn1, Button btn2, Button btn3, Button btn4)
 		{
-			btn1.Click += (sender, e) =>	OnButtonPress("File");
-			btn2.Click += (sender, e) =>	OnButtonPress("View");
-			btn3.Click += (sender, e) =>	OnButtonPress("Help");
-			btn4.Click += (sender, e) =>	OnButtonPress("Tools");
+			//btn1.Click += (sender, e) =>	OnButtonPress("File");
+			//btn2.Click += (sender, e) =>	OnButtonPress("View");
+			//btn3.Click += (sender, e) =>	OnButtonPress("Help");
+			//btn4.Click += (sender, e) =>	OnButtonPress("Tools");
 		}
 	}
 }
