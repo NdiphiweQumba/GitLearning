@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF43444E" Margin="1,1,1,1">
         <Canvas x:Name="editing_canvas" Margin="0,34,0,350" Height="50" VerticalAlignment="Top">
-            <Button x:Name="view_files" Canvas.Left="5" Canvas.Top="5" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="1,1,1,1" Height="35" VerticalAlignment="Center" FontFamily="Arial" Width="35" BorderBrush="#00707070" Click="OnClickViewFiles">
+            <Button x:Name="view_files" Canvas.Left="5" Canvas.Top="5" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="1,1,1,1" Height="35" VerticalAlignment="Center" FontFamily="Arial" Width="35" BorderBrush="#00707070" Click="OnViewClick">
                 <Button.Background>
                     <ImageBrush ImageSource="C:\Users\Ndiph\Documents\Git\WindowsPlatform\Sources\upload.png"/>
                 </Button.Background>
@@ -116,7 +116,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btn_view" Content="View" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnFileClick" FontSize="10" AutomationProperties.HelpText="Click to" Width="33" HorizontalAlignment="Left" Canvas.Left="48" Canvas.Top="10" VerticalAlignment="Top">
+            <Button x:Name="btn_view" Content="View" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnViewClick" FontSize="10" AutomationProperties.HelpText="Click to" Width="33" HorizontalAlignment="Left" Canvas.Left="48" Canvas.Top="10" VerticalAlignment="Top">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -135,7 +135,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="btn_help" Content="Help" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnViewClick" FontSize="10" AutomationProperties.HelpText="Click to view files" Width="33" HorizontalAlignment="Left" Canvas.Left="86" Canvas.Top="10" VerticalAlignment="Top">
+            <Button x:Name="btn_help" Content="Help" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnHelpClick" FontSize="10" AutomationProperties.HelpText="Click to view files" Width="33" HorizontalAlignment="Left" Canvas.Left="86" Canvas.Top="10" VerticalAlignment="Top">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -176,7 +176,7 @@
             <Label x:Name="lbl_response" Content="" RenderTransformOrigin="0.684,4.451" Width="300" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="317" Canvas.Top="384" VerticalAlignment="Top"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Canvas.Left="398" Canvas.Top="215" VerticalAlignment="Top"/>
             <Label x:Name="taskRunning_" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Canvas.Left="392" Canvas.Top="211" VerticalAlignment="Top"/>
-            <Button x:Name="btn_Options" Content="Options" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnToolsClick" FontSize="10" AutomationProperties.HelpText="Click for options" HorizontalAlignment="Left" Canvas.Left="162" Canvas.Top="10" VerticalAlignment="Top">
+            <Button x:Name="btn_Options" Content="Options" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="OnOptionsClick" FontSize="10" AutomationProperties.HelpText="Click for options" HorizontalAlignment="Left" Canvas.Left="162" Canvas.Top="10" VerticalAlignment="Top">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -195,6 +195,26 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            <Menu x:Name="file_menu" Height="106" Width="147" Canvas.Left="10" Canvas.Top="41" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FF1F1F1F" Visibility="Hidden">
+                <Label x:Name="initialize_new" Content="Initialize new Repo" Height="18" Width="142" Background="#FF1F1F1F" FontSize="9" FontFamily="Arial Black" VerticalContentAlignment="Center"/>
+                <Label x:Name="clone" Content="Clone..." Height="18" Width="142" Background="#FF1F1F1F" FontSize="9" FontFamily="Arial Black"/>
+                <Label x:Name="Open" Content="Open Repo" Height="18" Width="142" Background="#FF1F1F1F" FontSize="9" FontFamily="Arial Black"/>
+                <Label x:Name="Accounts" Content=" Accounts" Height="18" Width="142" Background="#FF1F1F1F" FontSize="9" FontFamily="Arial Black"/>
+            </Menu>
+            <TabControl x:Name="Repository_Tabs" Height="338" Width="798" HorizontalAlignment="Center" Canvas.Top="94" VerticalAlignment="Top">
+                <TabItem x:Name="firstTab" Header="firstTab" Height="22" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                    <Grid Background="#FF050B12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="85*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="ScndTab" Header="SecTab" Visibility="Hidden">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
         </Canvas>
 
 
