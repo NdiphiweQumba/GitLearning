@@ -202,17 +202,31 @@
                 <Label x:Name="Accounts" Content=" Accounts" Height="18" Width="142" Background="#FF1F1F1F" FontSize="9" FontFamily="Arial Black"/>
             </Menu>
             <TabControl x:Name="Repository_Tabs" Height="338" Width="798" HorizontalAlignment="Center" Canvas.Top="94" VerticalAlignment="Top">
-                <TabItem x:Name="firstTab" Header="firstTab" Height="22" Margin="-2,-2,-2,0" VerticalAlignment="Top">
-                    <Grid Background="#FF050B12">
+                <TabItem x:Name="firstTab" Header="local" Height="22" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                            <GradientStop Color="#FF210E0E" Offset="0.827"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid Background="#FF0E1A27">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="85*"/>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="265*"/>
+                            <ColumnDefinition Width="518*"/>
                         </Grid.ColumnDefinitions>
+                        <Viewbox Margin="1,0,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2" VerticalAlignment="Top" Height="35">
+                            <Label x:Name="local_changes" Content="Local Changes" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="10" UseLayoutRounding="False" FontSize="6" Foreground="White" Width="41">
+                                <Label.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black"/>
+                                        <GradientStop Color="#FF396E75" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Label.Background>
+                            </Label>
+                        </Viewbox>
                     </Grid>
-                </TabItem>
-                <TabItem x:Name="ScndTab" Header="SecTab" Visibility="Hidden">
-                    <Grid Background="#FFE5E5E5"/>
                 </TabItem>
             </TabControl>
         </Canvas>

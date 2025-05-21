@@ -40,7 +40,7 @@ namespace WindowsPlatform
 			string repoName = "NoName";
 			try
 			{
-				using (var repo = new Repository(@"C:\Users\Ndiph\Documents\Git\WindowsPlatform\"))
+				using (var repo = new Repository(@"C:\Users\Ndiph\Documents\Git\GAME DEVELOPMENT\Unity-Traffic-System\"))
 				{
 					var repoPath = repo.Info.WorkingDirectory.TrimEnd(System.IO.Path.DirectorySeparatorChar);
 					repoName = System.IO.Path.GetFileName(repoPath);
@@ -73,6 +73,11 @@ namespace WindowsPlatform
 		private void OnStageClick(object sender, RoutedEventArgs e)
 		{
 			lbl_response.Content = "Stage tab clicked.";
+		}
+
+		private void ListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+		{
+
 		}
 	}
 }
